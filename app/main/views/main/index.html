@@ -17,6 +17,40 @@
 
   <br><br>
   Search for events - route: cityofnewyork.us/calendar/v1/search.htm<br>
+  Select boroughs<br>
+  <input type="checkbox" checked="{{ page._show_brooklyn }}"> Brooklyn <br/>
+  <input type="checkbox" checked="{{ page._show_bronx }}"> Bronx <br/>
+  <input type="checkbox" checked="{{ page._show_manhattan }}"> Manhattan <br/>
+  <input type="checkbox" checked="{{ page._show_staten_island }}"> Staten Island<br/>
+  <input type="checkbox" checked="{{ page._show_queens }}"> Queens<br/>
+  <input type="checkbox" checked="{{ page._show_other }}"> Other<br/>
+
+  <br><br>
+
+  {{ page._show_brooklyn }}
+
+  <br><br>
+
+  {{ page._show_bronx }}
+
+  <br><br>
+
+  {{ page._show_manhattan }}
+
+  <br><br>
+
+  {{ page._show_staten_island }}
+
+  <br><br> 
+
+  {{ page._show_queens }}
+
+  <br><br>
+
+  {{ page._show_other }}
+
+  <br><br>
+
   <input type="text" value="{{ page._event_category }}" style="width:400px;" placeholder="enter category">
   <button e-click="search_for_events">search for events</button>
   <button e-click="page._events_search = []">clear events search</button>
