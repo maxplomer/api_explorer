@@ -4,6 +4,16 @@
 <:Body>
   <h1>Home</h1>
 
+  <button e-click="get_categories">get categories from api</button>
+  <br>
+  {{ page._categories.each do |category| }}
+    {{ category }}<br>
+  {{ end }}
+
+
+
+  <h1>todo test</h1>
+
   <input class="form-control" type="text" value="{{ page._new_todo }}" />
 
   <button e-click="add_todo"> add todo</button>

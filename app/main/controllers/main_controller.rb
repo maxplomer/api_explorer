@@ -9,6 +9,12 @@ module Main
       # Add code for when the about view is loaded
     end
 
+    def get_categories
+      EventTasks.get_categories.then do |categories|
+        page._categories = categories
+      end
+    end
+
     def add_todo
       store._todos << {text: page._new_todo}
       page._new_todo = ''
