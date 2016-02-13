@@ -19,11 +19,14 @@
   Search for events - route: cityofnewyork.us/calendar/v1/search.htm<br>
   <input type="text" value="{{ page._event_category }}" style="width:400px;" placeholder="enter category">
   <button e-click="search_for_events">search for events</button>
+  <button e-click="page._events_search = []">clear events search</button>
 
   {{ page._events_search.length }}<br><br>
 
+  {{ page._events_search.first.inspect }}<br><br>
+
   {{ page._events_search.each do |event| }}
-    {{ event["desc"] }} hello<br><br>
+    {{ event["permalink"] }} <br><br>
   {{ end}}
 
   <h1>todo test</h1>
