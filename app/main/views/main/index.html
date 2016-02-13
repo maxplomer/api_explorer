@@ -21,12 +21,10 @@
   <button e-click="search_for_events">search for events</button>
   <button e-click="page._events_search = []">clear events search</button>
 
-  {{ page._events_search.length }}<br><br>
-
-  {{ page._events_search.first.inspect }}<br><br>
+  <br><br>
 
   {{ page._events_search.each do |event| }}
-    {{ event._permalink }} <br><br>
+    <a href="{{ event._permalink }}">{{ event._permalink }}</a> <br><br>
   {{ end}}
 
   <h1>todo test</h1>
