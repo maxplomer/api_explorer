@@ -4,6 +4,12 @@ module Main
     def index
       page._events_search = []
       # Add code for when the index view is loaded
+      page._show_brooklyn = false
+      page._show_bronx = false
+      page._show_manhattan = false
+      page._show_staten_island = false
+      page._show_queens = false
+      page._show_other = false
     end
 
     def about
