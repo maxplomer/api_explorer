@@ -4,7 +4,9 @@
 <:Body>
   <h1>Home</h1>
 
-  NYC Events Calendar API - route: cityofnewyork.us/calendar/v1<br>
+  NYC Events Calendar API <br><br>
+
+  List of all Categories - route: cityofnewyork.us/calendar/v1<br>
 
   <button e-click="get_categories">get categories from api</button>
   <button e-click="page._categories = []">clear categories</button>
@@ -12,6 +14,12 @@
   {{ page._categories.each do |category| }}
     {{ category }}<br>
   {{ end }}
+
+  <br><br>
+  Search for events - route: cityofnewyork.us/calendar/v1/search.htm<br>
+  <input type="text" value="{{ page._event_search }}" style="width:400%">
+  <button e-click="search_for_events">search for events</button>
+
 
 
 
