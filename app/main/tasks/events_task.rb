@@ -15,7 +15,10 @@ class EventTasks < Volt::Task
     result = []
 
     response["items"].each do |item| 
-      result << { permalink: item["permalink"] }
+      result << {
+        permalink: item["permalink"], 
+        desc: item["desc"]
+      }
     end
     
     result

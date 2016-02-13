@@ -24,7 +24,13 @@
   <br><br>
 
   {{ page._events_search.each do |event| }}
+    <hr>
     <a href="{{ event._permalink }}">{{ event._permalink }}</a> <br><br>
+    {{ raw(event._desc) }} <br><br>
+
+    NOT RAW
+
+    {{ event._desc }} <br><br>
   {{ end}}
 
   <h1>todo test</h1>
