@@ -15,6 +15,12 @@ module Main
       end
     end
 
+    def search_for_events
+      EventTasks.search_for_events(page._event_category).then do |events|
+        page._events_search = events
+      end
+    end
+
     def add_todo
       store._todos << {text: page._new_todo}
       page._new_todo = ''
