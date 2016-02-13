@@ -23,7 +23,16 @@ module Main
     end
 
     def search_for_events
-      EventTasks.search_for_events(page._event_category).then do |events|
+      boroughs = []
+      boroughs << 'Bk' if page._show_brooklyn
+      boroughs << 'Bx' if page._show_bronx
+      boroughs << 'Mn' if page._show_manhattan
+      boroughs << 'SI' if page._show_staten_island
+      boroughs << 'Qn' if page._show_queens
+      boroughs << 'Ot' if page._show_other
+      boroughs_str = boroughs.join('+')
+
+      EventTasks.search_for_events(page._event_category, boroughs_str).then do |events|
         page._events_search = events
       end
     end
