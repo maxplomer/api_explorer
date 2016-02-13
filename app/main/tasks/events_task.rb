@@ -8,4 +8,11 @@ class EventTasks < Volt::Task
     response
   end
 
+  def search_for_events(categories)
+    response = JSON.parse(
+      RestClient.get "https://api.cityofnewyork.us/calendar/v1/search.htm?app_id=#{ENV['EVENTS_PROJECT_ID']}&app_key=#{ENV['EVENTS_PROJECT_KEY']}&categories=#{categories}"
+    )
+    response
+  end
+
 end
