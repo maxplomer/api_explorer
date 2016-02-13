@@ -20,8 +20,10 @@
   <input type="text" value="{{ page._event_category }}" style="width:400px;" placeholder="enter category">
   <button e-click="search_for_events">search for events</button>
 
+  {{ page._events_search.length }}<br><br>
+
   {{ page._events_search.each do |event| }}
-    {{ raw(event["desc"]) }} <br><br>
+    {{ event["desc"] }} hello<br><br>
   {{ end}}
 
   <h1>todo test</h1>
