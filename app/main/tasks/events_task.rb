@@ -12,7 +12,7 @@ class EventTasks < Volt::Task
     response = JSON.parse(
       RestClient.get "https://api.cityofnewyork.us/calendar/v1/search.htm?app_id=#{ENV['EVENTS_PROJECT_ID']}&app_key=#{ENV['EVENTS_PROJECT_KEY']}&categories=#{categories}"
     )
-    response
+    response["items"]
   end
 
 end
