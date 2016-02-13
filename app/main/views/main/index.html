@@ -4,3 +4,11 @@
 <:Body>
   <h1>Home</h1>
 
+  <input class="form-control" type="text" value="{{ page._new_todo }}" />
+
+  <button e-click="add_todo"> add todo</button>
+
+  {{ store._todos.all.each do |todo| }}
+    {{ todo._text }}<br>
+  {{ end }}
+
