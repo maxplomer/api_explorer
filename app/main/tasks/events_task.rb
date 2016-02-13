@@ -17,7 +17,7 @@ class EventTasks < Volt::Task
     response["items"].each do |item| 
       result << {
         permalink: item["permalink"], 
-        desc: item["desc"]
+        desc: item["desc"].gsub('\n','<br>').gsub('\\','')
       }
     end
     
